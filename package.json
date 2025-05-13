@@ -1,6 +1,6 @@
 {
   "name": "@edge/link",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cryptographically-secure, trust-minimised WebSocket link-layer for the Edge network.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "Edge Network <core@edge.network>",
