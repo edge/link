@@ -2,28 +2,37 @@
 
 # Link
 
-Cryptographically‑secure, trust‑minimised WebSocket link‑layer for the Edge network.
+> Cryptographically‑secure, trust‑minimised WebSocket link‑layer for the Edge network.
 
-Edge Link (@edge/link) is a cryptographically authenticated session layer for secure peer-to-peer coordination. It establishes a thin, trust-minimised relay layer over raw or TLS WebSockets, ensuring identity, integrity, and session continuity. Designed for distributed systems with strong cryptographic guarantees, it forms the connective substrate for blockchain-adjacent applications that require lightweight, verifiable communication.
+Edge Link (`@edge/link`) is a cryptographically authenticated session layer for secure peer-to-peer coordination. It establishes a thin, trust-minimised relay layer over raw or TLS WebSockets, ensuring identity, integrity, and session continuity. Designed for distributed systems with strong cryptographic guarantees, it forms the connective substrate for blockchain-adjacent applications that require lightweight, verifiable communication.
 
 ## Key Features
 
 Link is designed to be simple to use and understand, with a focus on security and ease of use.
 
-* **Designed for humans** – small surface area, zero config defaults, and a dev experience that gets out of your way.
-* **Cryptographic authentication** – peers use XE wallets to establish identity and session integrity with no shared secrets or passwords.
-* **Plug-and-play wallet identity** – bring your own XE wallet or generate one on the fly — identity is first-class and seamless.
-* **Instant secure server** – launch a cryptographically-authenticated WebSocket server in under 10 lines — no boilerplate, no fuss.
-* **Protocol minimalism** – only two handshake messages are required to establish mutual trust; everything after is just JSON.
+* **Designed for humans**<br>
+  Small surface area, zero config defaults, and a dev experience that gets out of your way.
+* **Cryptographic authentication**<br>
+  Peers use XE wallets to establish identity and session integrity with no shared secrets or passwords.
+* **Plug-and-play wallet identity**<br>
+  Bring your own XE wallet or generate one on the fly — identity is first-class and seamless.
+* **Instant secure server**<br>
+  Launch a cryptographically-authenticated WebSocket server in under 10 lines — no boilerplate, no fuss.
+* **Protocol minimalism**<br>
+  Only two handshake messages are required to establish mutual trust; everything after is just JSON.
 
 ### Additional Features
 
 It also includes many additional features, such as:
 
-* **Heartbeat & liveness** – automatic ping/pong exchange ensures active connections and gives you real-time latency feedback.
-* **Auto‑reconnect** – exponential back-off and capped retries provide graceful recovery from network hiccups.
-* **Timeout guards** – unauthenticated sockets and stale clients are actively removed, keeping your server lean and clean.
-* **TLS optional** – add a cert and key, and you instantly upgrade to encrypted `wss://` with no config gymnastics required.
+* **Heartbeat & liveness**<br>
+  Automatic ping/pong exchange ensures active connections and gives you real-time latency feedback.
+* **Auto‑reconnect**<br>
+  Exponential back-off and capped retries provide graceful recovery from network hiccups.
+* **Timeout guards**<br>
+  Unauthenticated sockets and stale clients are actively removed, keeping your server lean and clean.
+* **TLS optional**<br>
+  Add a cert and key, and you instantly upgrade to encrypted `wss://` with no config gymnastics required.
 
 > More features will be added in the future.
 
