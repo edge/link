@@ -6,6 +6,10 @@
 
 Edge Link (`@edge/link`) is a cryptographically authenticated session layer for secure peer-to-peer coordination. It establishes a thin, trust-minimised relay layer over raw or TLS WebSockets, ensuring identity, integrity, and session continuity. Designed for distributed systems with strong cryptographic guarantees, it forms the connective substrate for blockchain-adjacent applications that require lightweight, verifiable communication.
 
+[![npm version](https://img.shields.io/npm/v/@edge/link)](https://www.npmjs.com/package/@edge/link)
+[![npm downloads](https://img.shields.io/npm/dt/@edge/link)](https://www.npmjs.com/package/@edge/link)
+[![license](https://img.shields.io/npm/l/@edge/link)](LICENSE.md)
+
 ## Key Features
 
 Link is designed to be simple to use and understand, with a focus on security and ease of use.
