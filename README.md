@@ -112,6 +112,8 @@ Creates a new authenticated WebSocket server.
 * `server.close()` – Shuts down the server and clears internal timers.
 * `client.send(msg)` – Send a JSON-serializable object to this client (inside `server.on('message')` or `server.on('authenticated')`).
 
+---
+
 ### `new Client(options)`
 
 Creates a new authenticated WebSocket client.
