@@ -1,0 +1,18 @@
+{
+  "name": "@edge/link",
+  "version": "0.0.0",
+  "description": "Cryptographically-secure, trust-minimised WebSocket link-layer for the Edge network.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Edge Network <core@edge.network>",
+  "contributors": [
+    "Adam K Dean <adam@edge.network>"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@edge/utils": "^0.1.1",
+    "debug": "^4.4.0",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.1"
+  }
+}
