@@ -79,7 +79,7 @@ Perfect. Here's the complete, accurate **Methods** section added to the API refe
 
 ### `new Server(options)`
 
-Creates a new authenticated WebSocket server.
+Creates a new authenticated Link server.
 
 #### Options
 
@@ -112,11 +112,11 @@ Creates a new authenticated WebSocket server.
 * `server.close()` – Shuts down the server and clears internal timers.
 * `client.send(msg)` – Send a JSON-serializable object to this client (inside `server.on('message')` or `server.on('authenticated')`).
 
----
+<br>
 
 ### `new Client(options)`
 
-Creates a new authenticated WebSocket client.
+Creates a new authenticated Link client.
 
 #### Options
 
