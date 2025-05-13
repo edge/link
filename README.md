@@ -2,7 +2,7 @@
 
 # Link
 
-> Cryptographically‑secure, trust‑minimised WebSocket link‑layer for the Edge network.
+> Cryptographically secure, trust minimised WebSocket link layer for the Edge network.
 
 Edge Link (`@edge/link`) is a cryptographically authenticated session layer for secure peer-to-peer coordination. It establishes a thin, trust-minimised relay layer over raw or TLS WebSockets, ensuring identity, integrity, and session continuity. Designed for distributed systems with strong cryptographic guarantees, it forms the connective substrate for blockchain-adjacent applications that require lightweight, verifiable communication.
 
