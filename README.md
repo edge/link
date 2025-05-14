@@ -77,8 +77,6 @@ client.connect()
 
 Full working demos live in **`examples/simple‑server`** and **`examples/simple‑client`**.
 
-Perfect. Here's the complete, accurate **Methods** section added to the API reference for both `Server` and `Client`:
-
 ## API Reference
 
 ### `new Server(options)`
