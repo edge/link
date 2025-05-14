@@ -85,23 +85,26 @@ Creates a new authenticated Link server.
 
 #### Options
 
-| Name                    | Type   | Default | Description                                       |
-| ----------------------- | ------ | ------- | ------------------------------------------------- |
-| `port`                  | number | `3793`  | Port to bind the HTTP/TLS server to               |
-| `authTimeout`           | number | `5000`  | Max time (ms) to wait for authentication          |
-| `authCheckInterval`     | number | `1000`  | Interval (ms) to sweep unauthenticated sockets    |
-| `heartbeatInterval`     | number | `1000`  | Interval (ms) between server-to-client pings      |
-| `clientTimeout`         | number | `5000`  | Inactivity timeout (ms) for authenticated clients |
-| `clientTimeoutInterval` | number | `1000`  | Interval (ms) to check for idle clients           |
-| `wallet`                | object | `null`  | Optional XE wallet object                         |
-| `privateKey`            | string | `null`  | Optional hex string; overrides `wallet`           |
-| `key`                   | string | `null`  | Optional path to TLS key for `wss://`             |
-| `cert`                  | string | `null`  | Optional path to TLS cert for `wss://`            |
-| `whitelist`             | array  | `null`  | Optional array of whitelisted addresses           |
+| Name                    | Type    | Default | Description                                       |
+| ----------------------- | ------- | ------- | ------------------------------------------------- |
+| `port`                  | number  | `3793`  | Port to bind the HTTP/TLS server to               |
+| `key`                   | string  | `null`  | Optional path to TLS key for `wss://`             |
+| `cert`                  | string  | `null`  | Optional path to TLS cert for `wss://`            |
+| `authTimeout`           | number  | `5000`  | Max time (ms) to wait for authentication          |
+| `authCheckInterval`     | number  | `1000`  | Interval (ms) to sweep unauthenticated sockets    |
+| `heartbeatInterval`     | number  | `1000`  | Interval (ms) between server-to-client pings      |
+| `clientTimeout`         | number  | `5000`  | Inactivity timeout (ms) for authenticated clients |
+| `clientTimeoutInterval` | number  | `1000`  | Interval (ms) to check for idle clients           |
+| `replaceExisting`       | boolean | `true`  | Replace existing client on new connection with same address |
+| `wallet`                | object  | `null`  | Optional XE wallet object                         |
+| `privateKey`            | string  | `null`  | Optional hex string; overrides `wallet`           |
+| `whitelist`             | array   | `null`  | Optional array of whitelisted addresses           |
 
 These options are passed to the constructor and become fields on the server instance.
 
 Note: whitelist is converted to a `Set<string>`.
+
+Note: `replaceExisting` controls whether the server will replace an existing client with the same address on a new connection. If `false`, the new connection will be rejected with a `409 Conflict` response. Beware that this can cause clients to ping/pong if they share the same wallet.
 
 #### Events
 
@@ -121,7 +124,13 @@ Note: whitelist is converted to a `Set<string>`.
 * `server.client(id)` – Returns the client with the given ID.
 * `server.broadcast(msg)` – Sends a message to all connected clients.
 * `server.send(id, msg)` – Sends a message to the client with the given ID.
-* `client.send(msg)` – Send a JSON-serializable object to this client (inside `server.on('message')` or `server.on('authenticated')`).
+
+On the `ConnectedClient` object:
+
+* `client.send(msg)` – Send a JSON-serializable object to this client
+* `client.close()` – Closes the connection
+
+Note: this is the server-side client instance, not the `Client` class.
 
 <br>
 
