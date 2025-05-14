@@ -160,7 +160,7 @@ Interested in contributing to the project? Amazing! Before you do, please have a
 Edge is the infrastructure of Web3. A peer-to-peer network and blockchain providing high performance decentralised web services, powered by the spare capacity all around us.
 
 Copyright notice
-(C) 2021 Edge Network Technologies Limited <support@edge.network><br />
+(C) 2025 Edge Network Technologies Limited <support@edge.network><br />
 All rights reserved
 
 This product is part of Edge.
