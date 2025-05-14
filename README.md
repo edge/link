@@ -97,6 +97,11 @@ Creates a new authenticated Link server.
 | `privateKey`            | string | `null`  | Optional hex string; overrides `wallet`           |
 | `key`                   | string | `null`  | Optional path to TLS key for `wss://`             |
 | `cert`                  | string | `null`  | Optional path to TLS cert for `wss://`            |
+| `whitelist`             | array  | `null`  | Optional array of whitelisted addresses           |
+
+These options are passed to the constructor and become fields on the server instance.
+
+Note: whitelist is converted to a `Set<string>`.
 
 #### Events
 
@@ -112,6 +117,10 @@ Creates a new authenticated Link server.
 
 * `server.listen(cb)` – Starts listening on the configured port. Accepts optional callback.
 * `server.close()` – Shuts down the server and clears internal timers.
+* `server.clients()` – Returns an array of all connected clients.
+* `server.client(id)` – Returns the client with the given ID.
+* `server.broadcast(msg)` – Sends a message to all connected clients.
+* `server.send(id, msg)` – Sends a message to the client with the given ID.
 * `client.send(msg)` – Send a JSON-serializable object to this client (inside `server.on('message')` or `server.on('authenticated')`).
 
 <br>
