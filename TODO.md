@@ -1,0 +1,2 @@
+- [ ] allow multiple?
+- [ ] disconnect overlaps
